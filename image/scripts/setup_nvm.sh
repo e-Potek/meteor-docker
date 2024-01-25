@@ -31,6 +31,7 @@ if [[ $MAJOR_NODE_VERSION == "14" && $MINOR_NODE_VERSION -ge 21 && $PATCH_NODE_V
     mv /tmp/node-v$NODE_VERSION-linux-x64 $NODE_INSTALL_PATH
   fi
 
+  nvm --delete-prefix v$NODE_VERSION
   nvm use $NODE_VERSION
 else
   echo "Using NVM"
