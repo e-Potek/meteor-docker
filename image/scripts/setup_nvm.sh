@@ -30,9 +30,7 @@ if [[ $MAJOR_NODE_VERSION == "14" && $MINOR_NODE_VERSION -ge 21 && $PATCH_NODE_V
     curl "https://static.meteor.com/dev-bundle-node-os/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" | tar xzf - -C /tmp/
     mv /tmp/node-v$NODE_VERSION-linux-x64 $NODE_INSTALL_PATH
   fi
-
-  npm config delete prefix 
-  npm config set prefix $NVM_DIR/versions/node/v$NODE_VERSION
+  
   nvm use $NODE_VERSION
 else
   echo "Using NVM"
