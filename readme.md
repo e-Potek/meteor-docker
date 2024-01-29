@@ -5,6 +5,14 @@ zodern/meteor Docker Image
 
 Docker image to run Meteor apps.
 
+# How to compile image on M1 mac?
+```bash
+cd image
+docker buildx build --platform=linux/amd64 -t epotek/meteor-docker .
+docker login
+docker push epotek/meteor-docker
+```
+
 ### Features
 
 - One image supports every Meteor version (tested with 1.2 - 2.13 and newer)
